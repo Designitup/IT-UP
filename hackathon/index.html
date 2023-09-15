@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,300&display=swap" rel="stylesheet">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .logo {
+            height: 81px;
+            background-color: #4e4e52;
+        }
+
+        .logo1 {
+            padding: 5px;
+
+        }
+
+        body {
+            background: #2a2a2e;
+        }
+
+        #home {
+            padding-left: 40px;
+        }
+
+        .navbar {
+            background-color: black;
+            color: #fff;
+            width: 100%;
+        }
+
+        button {
+            background: #efefef;
+            height: 20px;
+            width: 40px;
+            border-radius: 20px;
+            border: 0;
+            outline: 0;
+            cursor: pointer;
+            display: inline-block;
+            margin-left: 1240px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            transition: bidhi 0.8s;
+        }
+
+        button span {
+            display: block;
+            background: #999;
+            height: 18px;
+            width: 18px;
+            border-radius: 50%;
+            margin-left: 2px;
+            transition: bidhi 0.5s, margin-left 0.5s;
+        }
+
+        ul {
+            display: inline-block;
+            margin-top: 20px;
+            margin-bottom: 1px;
+        }
+
+        .Header li {
+            display: inline-block;
+            padding-right: 30px;
+            padding-top: 5px;
+            padding-bottom: 4px;
+            font-family: 'Josefin Sans', sans-serif;
+            font-weight: bold;
+            font-size: larger;
+        }
+
+        .lamp-container {
+            position: relative;
+            top: 0px;
+            left: 22%;
+            width: 100px;
+            display:inline-block;
+
+        }
+
+        .lamp {
+            width: 100%;
+        }
+
+        .light {
+            position: absolute;
+            top: 97%;
+            left: 55%;
+            transform: translateX(-50%);
+            width: 370px;
+            margin-left: -10px;
+            opacity: 0;
+            transition: opacity 0.8s;
+        }
+
+        .active {
+            background-color: rgba(173, 26, 36, 218);
+        }
+
+        .active span {
+            background: #fff;
+            margin-left: 22px;
+        }
+
+        .on {
+            opacity: 1;
+        }
+
+        #bt {
+            margin-left: 1200px;
+        }
+
+        .extras {
+            display: inline-block;
+            text-align: center;
+            list-style: none;
+            line-height: 40px;
+            font-family: 'Josefin Sans', sans-serif;
+            font-weight: bold;
+            padding-top: 50px;
+            opacity: 1;
+            transition: opacity 0.8s;
+            color:#2a2a2e;
+        }
+
+        .content {
+            display: inline-flex;
+            transform: translateX(19%);
+            padding-left: 183px;
+          transform: translateX(-9%) translateY(10%);
+        }
+        .grp{
+            float: right;
+            opacity: 0.7;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="logo">
+        <img src="logo.png" class="logo1">
+
+    </div>
+    <div class="navbar">
+        <ul class="Header">
+            <li id="home">Home</li>
+            <li>About Us</li>
+            <li>Past Events</li>
+            <li>Current Members</li>
+            <li>Contact Us</li>
+            <li id="bt">Upcoming Events</li>
+        </ul>
+        <button type="button" onclick="toggleBtn()" id="btn"><span></span></button>
+    </div>
+    <div class="lamp-container">
+        <img src="lamp.png" class="lamp">
+        <img src="light.png" class="light" id="light">
+    </div>
+    <div class="content">
+        <ul class="extras" id="extras">
+            <li>ASI HOUR</li>
+            <li>MOVIE WEEK</li>
+            <li>DATATHON</li>
+            <li>RESEARCH HOUR</li>
+            <li>UPCOMING SEMINARS</li>
+        </ul>
+    </div>
+<div class="grp"><img src="banner.png"></div>
+
+</body>
+<script>
+    var btn = document.getElementById("btn");
+    var light = document.getElementById("light");
+    var extras = document.getElementById("extras");
+    function toggleBtn() {
+        btn.classList.toggle("active");
+        light.classList.toggle("on");
+        extras.classList.toggle("on");
+    }
+</script>
+
+</html>
